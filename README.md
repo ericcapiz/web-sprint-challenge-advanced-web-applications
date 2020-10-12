@@ -28,9 +28,25 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain what a token is used for.
+
+A token is a string that can be added to localStorage to access items in a Private Route.
+
 2. What steps can you take in your web apps to keep your data secure?
+
+On the front-end side you can add information inside of Private Routes so that that information is only accessible to individuals with a token. Require stronger passwords and the ability to revoke the token after a session expires.
+
+
 3. Describe how web servers work.
+
+Web servers provide a location to store and manage the files that displayed by the browser. The files are requested through a web browser and an API and then returned to display the data in the DOM.
+
+
 4. Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+Post: Create
+Get: Read
+Put: Update
+Delete: Destory
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
