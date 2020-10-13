@@ -1,31 +1,10 @@
 import React from "react";
-import { render, screen, wait, fireEvent } from "@testing-library/react";
-import Login from './Login';
+import { render, screen, wait} from "@testing-library/react";
+
 import BubblePage from "./BubblePage";
-import { act } from "react-dom/test-utils";
 
 
-     jest.mock('react-router', () => ({
-       ...jest.requireActual('react-router'),
-       useHistory: () => ({
-         push:jest.fn()
-       })
-     }))
 
-test("User Can Login ", async () => {
-  const mockOnSubmit = jest.fn()
-  const{getByTestId, getByRole} = render(<Login onSubmit = {mockOnSubmit} />);
-  const usernameInput = getByTestId("username")
-  const passwordInput = getByTestId("password")
-  await act (async () => {
-    fireEvent.change(usernameInput, {target:{value:"Lambda School"}})
-    fireEvent.change(passwordInput , {target: {value:"I<3Lambd4"}})
-  })
-  await act(async () => {
-    fireEvent.click(getByTestId("submit"))
-})
-  expect(mockOnSubmit).toHaveBeenCalled
-});
 
 test("Fetches data and renders the bubbles", async () => {
   // Finish this test
@@ -36,7 +15,7 @@ test("Fetches data and renders the bubbles", async () => {
   await wait (() => {
     getByText(/lilac/i);
   });
-  const bubble = screen.getByText(/lilac/i);
+  const bubble = screen.getByText(/aqua/i);
 
   expect(bubble).toBeInTheDocument();
 
